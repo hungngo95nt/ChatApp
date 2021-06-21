@@ -73,7 +73,7 @@ function TabHandler({tabs, tabWidth}) {
               height={NAVIGATION_BOTTOM_TABS_HEIGHT}>
               <Box
                 position="absolute"
-                style={{top: -NAVIGATION_BOTTOM_TABS_HEIGHT / 2}}>
+                style={{top: -NAVIGATION_BOTTOM_TABS_HEIGHT}}>
                 <Logo />
               </Box>
             </Box>
