@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {TouchableOpacity} from 'react-native';
 import FaIcon from 'react-native-vector-icons/Feather';
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
 import {Box, Text, useTheme} from '~/theme';
 import {SIZES, ROUTES, NAVIGATION_TAB_PROP_TYPE} from '~/constants';
@@ -18,31 +20,31 @@ function TabHandler({tabs, tabWidth}) {
     switch (name) {
       case ROUTES.A: {
         if (routeName === ROUTES.A) {
-          return <FaIcon name="activity" />;
+          return <FontAwesomeIcon name="bell" />;
         }
 
-        return <FaIcon name="activity" />;
-      }
+        return <FontAwesomeIcon name="bell" size={30} />;
+            }
       case ROUTES.B: {
         if (routeName === ROUTES.B) {
-          return <FaIcon name="activity" />;
+          return <FaIcon name="message-square" />;
         }
 
-        return <FaIcon name="activity" />;
+        return <FaIcon name="message-square" size={30} />;
       }
       case ROUTES.D: {
         if (routeName === ROUTES.D) {
-          return <FaIcon name="activity" />;
+          return <FaIcon name="users" />;
         }
 
-        return <FaIcon name="activity" />;
+        return <FaIcon name="users" size={30} />;
       }
       case ROUTES.E: {
         if (routeName === ROUTES.E) {
-          return <FaIcon name="activity" />;
+          return <FontAwesomeIcon name="news" />;
         }
 
-        return <FaIcon name="activity" />;
+        return <MaterialIcon name="article" size={30} />;
       }
       default:
         break;
@@ -73,7 +75,7 @@ function TabHandler({tabs, tabWidth}) {
               height={NAVIGATION_BOTTOM_TABS_HEIGHT}>
               <Box
                 position="absolute"
-                style={{top: -NAVIGATION_BOTTOM_TABS_HEIGHT}}>
+                style={{top: -NAVIGATION_BOTTOM_TABS_HEIGHT /2 }}>
                 <Logo />
               </Box>
             </Box>
@@ -89,7 +91,6 @@ function TabHandler({tabs, tabWidth}) {
               flexDirection="column"
               height={NAVIGATION_BOTTOM_TABS_HEIGHT}>
               {getIcon(tab.name)}
-              {getText(tab.name)}
             </Box>
           </TouchableOpacity>
         );

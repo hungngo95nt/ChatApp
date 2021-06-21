@@ -3,6 +3,7 @@ import React from 'react';
 import {View} from 'react-native';
 import MaskedView from '@react-native-community/masked-view';
 import LinearGradient from 'react-native-linear-gradient';
+import { Image } from 'react-native-svg';
 
 const width = 50;
 const height = 50;
@@ -14,7 +15,7 @@ function CenterLogo() {
         width,
         height,
         borderRadius: width / 2,
-        backgroundColor: 'red',
+        backgroundColor: 'gray',
       }}
     />
   );
@@ -26,6 +27,7 @@ function CenterLogo() {
           height,
           backgroundColor: '#fff',
         }}>
+        <Image src="../../public/logo.jpg" />
         <LinearGradient
           colors={['#8ac8ff', '#758eee', '#738aee']}
           start={{x: 0, y: 0}}
