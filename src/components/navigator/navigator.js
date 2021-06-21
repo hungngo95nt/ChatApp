@@ -4,7 +4,7 @@ import {Dimensions, StyleSheet} from 'react-native';
 import {Box} from '~/theme';
 import {SIZES, NAVIGATION_TAB_PROP_TYPE} from '~/constants';
 
-import TabHandler from './tabs';
+import TabHandler from './tabHandler';
 import TabShape from './tabShape';
 
 const {NAVIGATION_BOTTOM_TABS_HEIGHT} = SIZES;
