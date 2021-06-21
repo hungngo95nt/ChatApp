@@ -5,7 +5,7 @@ export default function Container({ children }) {
   return (
     <Box
       flex={1}
-      backgroundColor="white"
+      backgroundColor="dark"
       justifyContent="center"
       alignItems="center">
       

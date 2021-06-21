@@ -18,7 +18,7 @@ function TabsUI({tabs}) {
       {...{height: NAVIGATION_BOTTOM_TABS_HEIGHT, width: wWidth}}
       backgroundColor="noColor">
       <TabShape {...{tabWidth}} />
-      <Box {...StyleSheet.absoluteFill}>
+      <Box {...StyleSheet.absoluteFill} backgroundColor="white">
         <TabHandler {...{tabs, tabWidth}} />
       </Box>
     </Box>

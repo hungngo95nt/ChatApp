@@ -1,10 +1,10 @@
 import React from 'react';
 import Container from '~/containers';
 import { Text } from '~/theme';
-import FIcon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 export default () => (
   <Container>
-    <FIcon name="newspaper" />
+    <Icon name="home" size={60}/>
   </Container>
 );

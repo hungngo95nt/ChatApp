@@ -4,6 +4,7 @@ import {TouchableOpacity} from 'react-native';
 import FaIcon from 'react-native-vector-icons/Feather';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
+import {Image} from 'react-native';
 
 import {Box, Text, useTheme} from '~/theme';
 import {SIZES, ROUTES, NAVIGATION_TAB_PROP_TYPE} from '~/constants';
@@ -20,31 +21,38 @@ function TabHandler({tabs, tabWidth}) {
     switch (name) {
       case ROUTES.A: {
         if (routeName === ROUTES.A) {
-          return <FontAwesomeIcon name="bell" />;
+          return <MaterialIcon name="person" size={30} />;
         }
 
-        return <FontAwesomeIcon name="bell" size={30} />;
+        return <MaterialIcon name="person-outline" size={30} />;
             }
       case ROUTES.B: {
         if (routeName === ROUTES.B) {
-          return <FaIcon name="message-square" />;
+          return <MaterialIcon name="favorite" size={30} />;
         }
 
-        return <FaIcon name="message-square" size={30} />;
+        return <MaterialIcon name="favorite-border" size={30} />;
       }
       case ROUTES.D: {
         if (routeName === ROUTES.D) {
-          return <FaIcon name="users" />;
+          return <MaterialIcon name="search" size={30} />;
         }
 
-        return <FaIcon name="users" size={30} />;
+        return <MaterialIcon name="search" size={30} />;
       }
       case ROUTES.E: {
         if (routeName === ROUTES.E) {
-          return <FontAwesomeIcon name="news" />;
+          return <MaterialIcon name="home" size={30} />;
         }
 
-        return <MaterialIcon name="article" size={30} />;
+        return <Image
+                style={{
+                  width: 27,
+                  height: 27,
+                  resizeMode: 'stretch',
+                }}
+                source={require('../../public/home.png')} 
+                />;
       }
       default:
         break;
